@@ -132,7 +132,7 @@ body{
     width: 25%;
     margin-left: 5%;
     margin-right: 5%;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 #bio_text{
@@ -186,6 +186,7 @@ body{
 
 .tile_link{
     border: 1px solid rgb(218, 219, 184);
+    border-radius: 10%;
     width: 45%;
     margin: 2.5%;
     height: 100%;
@@ -207,6 +208,7 @@ body{
     width: 90%;
     margin-top: 5%;
     margin-bottom: 6%;
+    border-radius: 5%;
 }
 
 .project_tile_overview_text{
@@ -215,6 +217,7 @@ body{
 
 #auctions_tile_screenshot{
     width: 70%;
+    border-radius: 5%;
 }
 
 .tile_title{
