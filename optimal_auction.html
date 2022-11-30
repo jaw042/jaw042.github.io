@@ -1,0 +1,115 @@
+<html>
+<header>
+   <title>Landing page</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">  
+</header>
+<body id="optimal_auction_body">
+    <nav role="navigation" class="navbar">
+        <ul class="navigation_options">
+           <li class="navbar_button">
+              <a class="home_link" href="./index.html">Home</a>
+           </li>
+           <li class="navbar_button">
+              <a class="bio_link" href="./bio.html">Bio</a>
+           </li>
+           <li class="navbar_button">
+              <a class="projects_link" href="./projects_home.html">Projects</a>
+              <ul class="dropdown-menu">
+                 <li class="project_dropdown_item"><a href="./economic_petri_dish.html">Economic Petri Dish</a></li>
+                 <li class="project_dropdown_item"><a href="./optimal_auction.html">Optimal Auction Strategies</a></li>
+             </ul>
+           </li>
+           <li class="navbar_button">
+              <a class="resume_link" href="./resume.html">Resume</a>
+           </li>
+        </ul>
+    </nav>
+    <main>
+      <div id="auctions_main_content">
+         <h1>Optimal Auction Strategies</h1>
+         <div class="auctions_project_section">
+            <div class="auctions_picture_container">
+               <iframe src="https://www.desmos.com/calculator/4gj0ou6l4a" 
+                  id="desmos_graph" alt="graph visualization of optimal bidding strategies">
+               </iframe>
+            </div>
+            <div class="auctions_text_container">
+               <h2>Project Overview</h2>
+               The optimal auction strategy project was done for an economics class at Northwestern. The idea was to determine 
+               how one should bid in an auction given the auction type, how many people are bidding, and a unique value for the 
+               item being sold. We ran a series of pseudo-auctions in our class to collect data and used it to draw conclusions 
+               about optimal strategies.
+               <br>
+               <br>
+               <h2>Auction Types</h2>
+               We tested several different types of auctions in our experiment:
+               <ul>
+                  <li>First price auctions - highest bidder wins and pays their bid; the winner has 
+                     a utility equal to their value minus their bid, everyone else has utility 0
+                  </li>
+                  <li>Second price auctions - highest bidder wins and pays a price equal to the second highest bid; winner has
+                     a utility equal to their value minus the second highest bid, everyone else has a utility of 0
+                  </li>
+                  <li>All pay auctions - highest bidder wins, but everyone pays their bid; the winner has a utility equal to 
+                     their value minus their bid, everyone else has a utiilty equal to -bid
+                  </li>
+               </ul>
+               The optimal strategy for a second price auction is to bid your value, and this can be proven trivially. Additionally 
+               all pay auctions are somewhat rare, so for this overview, I'll focus on the first price auction piece of this
+               experiment.
+            </div>
+         </div>
+         <div class="auctions_project_section">
+            <div class="auctions_picture_container">
+               <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{150}\bg{white}winning\&space;probability&space;=&space;\left&space;(&space;\frac{bid}{100}&space;\right&space;)^{n&space;-&space;1}&space;\&space;\&space;\&space;(1)\\\\expected\&space;utility&space;=&space;winning\&space;probability&space;*&space;(value&space;-&space;bid)&space;\&space;\&space;\&space;(2)\\\\\frac{\partial&space;expected\&space;utility}{\partial&space;bid}&space;=&space;&space;0&space;\to&space;bid&space;=&space;\frac{n-1}{n}&space;*&space;value&space;\&space;\&space;\&space;(3)" 
+               title="https://latex.codecogs.com/png.image?\inline \large \dpi{150}\bg{white}winning\ probability = \left ( \frac{bid}{100} \right )^{n - 1} \ \ \ (1)\\\\expected\ utility = winning\ probability * (value - bid) \ \ \ (2)\\\\\frac{\partial expected\ utility}{\partial bid} = 0 \to bid = \frac{n-1}{n} * value \ \ \ (3)" 
+               alt="Formulas for winning probability (equation 1), expected utility (equation 2), and optimal bid (equation 3)"/>
+            </div>
+            <div class="auctions_text_container">
+               <h2>Setup and Theoretical Optimal Strategies</h2>
+               We operated our auctions under the following format:
+               <ul>
+                  <li>Participants would be assigned a random, uniformly distributed value between 1 and 100 (inclusive)</li>
+                  <li>Participants would be told how many people they were bidding against, but not specifically who</li>
+                  <li>Participants would enter their bids, as well as their values and number of opponents, using an online form</li>
+               </ul>
+               Under these assumptions, we can derive a theoretical optimal bidding strategy as a function of the number of participants
+               in the auction and the value assigned to any given participant. The expected utility of a bid for a participant is simply 
+               the probability that the participant wins with that bid multiplied by the utility they receive if they do win - see equations
+               1 and 2. We can then differentiate the expected utility function with respect to bid and set the result equal to 0 to find
+               the bid that maximizes expected utility - see equation 3. We assume equation 3 to be the optimal bidding strategy for a first
+               price auction. You can use the desmos window at the top left of the page to visualize the expected utilities for different
+               bid, value and auction size combinations (n is auction size, v is value, the x axis is bid and the y axis is expected utility).
+               The viewport is locked by default, but you can unlock it by clicking on the wrench in the upper right hand corner and unchecking
+               "lock viewport."
+            </div>
+         </div>
+         <div class="auctions_project_section">
+            <div class="auctions_picture_container">
+               <img src="./expected_payoffs_for_value10.0.png" class="auctions_results"
+               alt="actual expected payoffs for a value of 10 and auction size of 2">
+               <img src="./expected_payoffs_for_value57.0.png" class="auctions_results"
+               alt="actual expected payoffs for a value of 57 and auction size of 2">
+               <img src="./expected_payoffs_for_value80.0.png" class="auctions_results"
+               alt="actual expected payoffs for a value of 80 and auction size of 2">
+            </div>
+            <div class="auctions_text_container">
+               <h2>Results</h2>
+               The scatter plots on the left show the empirical expected utilities for different bids based on how participants actually bid. 
+               The graphs are for an auction size of 2, and for values of 10, 57 and 80 in that order. If you adjust the desmos window to similar 
+               settings, you'll find that the empirical graphs are pretty close to the theoretical predictions. In fact, we found that for an 
+               auction of size 2, the empirical optimal strategy was to bid 0.48*value, with a standard error of 0.026. For an auction of size 
+               16, we found that the optimal strategy was to bid 0.93*value, with a standard error of 0.01. Both of these estimates are very 
+               close to the theoretical optimal bidding strategies, which is interesting because for the most part, people did not follow the
+               optimal strategy. So, this suggests that regardless of other peoples' strategies, the theoretical optimal bidding strategyt is
+               the way to go.
+            </div>
+         </div>
+      </div>
+    </main>
+</body>

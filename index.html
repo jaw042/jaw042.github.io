@@ -1,0 +1,62 @@
+<html>
+<header>
+   <title>Landing page</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">  
+</header>
+<body id="landing_page_body">
+   <nav role="navigation" class="navbar">
+      <ul class="navigation_options">
+         <li class="navbar_button">
+            <a class="home_link" href="./index.html">Home</a>
+         </li>
+         <li class="navbar_button">
+            <a class="bio_link" href="./bio.html">Bio</a>
+         </li>
+         <li class="navbar_button">
+            <a class="projects_link" href="./projects_home.html">Projects</a>
+            <ul class="dropdown-menu">
+               <li class="project_dropdown_item"><a href="./economic_petri_dish.html">Economic Petri Dish</a></li>
+               <li class="project_dropdown_item"><a href="./optimal_auction.html">Optimal Auction Strategies</a></li>
+           </ul>
+         </li>
+         <li class="navbar_button">
+            <a class="resume_link" href="./resume.html">Resume</a>
+         </li>
+      </ul>
+  </nav>
+  <main>
+      <div id="main_landing_page_content">
+         <div id="main_name">
+            Jacob Wit
+         </div>
+         <div id="titles">
+            Software Engineer | Computer Science Student at Northwestern University
+         </div>
+         <br>
+         <div id="contact_info">
+            jacobwit2023@u.northwestern.edu | <a id="linkedin_link" href="https://www.linkedin.com/in/jacob-wit-10529b1aa?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BlJUY%2F2HhTNuhMd%2BF9WtMug%3D%3D">LinkedIn</a>
+         </div>
+         <h2>Projects Preview</h2>
+         <div id="landing_page_projects_showcase">
+            <a class = "tile_link" id="petri_dish_tile_link" href="./economic_petri_dish.html">
+               <div class="project_tile" id="petri_dish_tile">
+                 <h1 class="tile_title">Economic Petri Dish</h1>
+                 <img alt="screenshot of the petri dish model user interface" id="petri_dish_tile_screenshot" src="./petri_dish_model.png">
+               </div>
+           </a>
+           <a class="tile_link" id="auctions_tile_link" href="./optimal_auction.html">
+               <div class="project_tile" id="auctions_tile">
+                 <h1 class="tile_title">Optimal Auction Strategies</h1>
+                 <img src="./expected_payoffs_for_value57.0.png" id="auctions_tile_screenshot">
+               </div>
+           </a>
+         </div>
+      </div>
+  </main>
+</body>
+</html>

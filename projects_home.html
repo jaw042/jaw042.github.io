@@ -1,0 +1,61 @@
+<html>
+<header>
+   <title>Landing page</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">  
+</header>
+<body id="projects_home_body">
+    <nav role="navigation" class="navbar">
+        <ul class="navigation_options">
+           <li class="navbar_button">
+              <a class="home_link" href="./index.html">Home</a>
+           </li>
+           <li class="navbar_button">
+              <a class="bio_link" href="./bio.html">Bio</a>
+           </li>
+           <li class="navbar_button">
+              <a class="projects_link" href="./projects_home.html">Projects</a>
+              <ul class="dropdown-menu">
+                 <li class="project_dropdown_item"><a href="./economic_petri_dish.html">Economic Petri Dish</a></li>
+                 <li class="project_dropdown_item"><a href="./optimal_auction.html">Optimal Auction Strategies</a></li>
+             </ul>
+           </li>
+           <li class="navbar_button">
+              <a class="resume_link" href="./resume.html">Resume</a>
+           </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="project_home_content">
+            <a class = "tile_link" id="petri_dish_tile_link" href="./economic_petri_dish.html">
+                <div class="project_tile" id="petri_dish_tile">
+                  <h1 class="tile_title">Economic Petri Dish</h1>
+                  <img alt="screenshot of the petri dish model user interface" id="petri_dish_tile_screenshot" src="./petri_dish_model.png">
+                  <div class="project_tile_overview_text">
+                     When businesses that use different currencies negotiate contracts with one another, they often have to agree upon a fixed, nominal 
+                     price for the goods being traded. But, since exchange rates are somewhat volatile, this may result in one firm not being able to 
+                     uphold their end of the deal further down the line, resulting in the need for a costly contract re-negotiation. The economic petri 
+                     dish is an agent-based model that seeks to examine a potential solution to this problem: index-based pricing. Click on the tile to 
+                     learn.
+                  </div>
+                </div>
+            </a>
+            <a class="tile_link" id="auctions_tile_link" href="./optimal_auction.html">
+                <div class="project_tile" id="auctions_tile">
+                  <h1 class="tile_title">Optimal Auction Strategies</h1>
+                  <img src="./expected_payoffs_for_value57.0.png" id="auctions_tile_screenshot">
+                  <div class="project_tile_overview_text">
+                     Say you are in an auction. You know what kind of auction you're participating in (be it first price, second price etc), you know how 
+                     many people you're bidding against, and you know what you value the the item at. You don't know what others' values are, only that 
+                     they are probably uniformly distributed over some range. What should you bid? This project attempts to answer that question using some
+                     economic/statistical theory and simulations. Click the tile to learn more.
+                  </div>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>

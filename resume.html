@@ -1,0 +1,40 @@
+<html>
+<header>
+   <title>Landing page</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">  
+   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+</header>
+<body id="resume_page_body">
+    <nav role="navigation" class="navbar">
+        <ul class="navigation_options">
+           <li class="navbar_button">
+              <a class="home_link" href="./index.html">Home</a>
+           </li>
+           <li class="navbar_button">
+              <a class="bio_link" href="./bio.html">Bio</a>
+           </li>
+           <li class="navbar_button">
+              <a class="projects_link" href="./projects_home.html">Projects</a>
+              <ul class="dropdown-menu">
+                  <li class="project_dropdown_item"><a href="./economic_petri_dish.html">Economic Petri Dish</a></li>
+                  <li class="project_dropdown_item"><a href="./optimal_auction.html">Optimal Auction Strategies</a></li>
+              </ul>
+           </li>
+           <li class="navbar_button">
+              <a class="resume_link" href="./resume.html">Resume</a>
+           </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="main_resume_page_content">
+            <h1 id="resume_main_header">Resume</h1>
+            <h2 id="resume_alternative_link">Not showing? Click <a id="resume_here"href="./Jacob_Wit_c.pdf">here.</a></h2>
+           <iframe src="./Jacob_Wit_c.pdf" id="embedded_resume"></iframe>
+        </div>
+    </main>
+</body>

@@ -1,0 +1,103 @@
+<html>
+<header>
+   <title>Landing page</title>
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">  
+</header>
+<body id="economic_petri_dish_body">
+    <nav role="navigation" class="navbar">
+        <ul class="navigation_options">
+           <li class="navbar_button">
+              <a class="home_link" href="./index.html">Home</a>
+           </li>
+           <li class="navbar_button">
+              <a class="bio_link" href="./bio.html">Bio</a>
+           </li>
+           <li class="navbar_button">
+              <a class="projects_link" href="./projects_home.html">Projects</a>
+              <ul class="dropdown-menu">
+                 <li class="project_dropdown_item"><a href="./economic_petri_dish.html">Economic Petri Dish</a></li>
+                 <li class="project_dropdown_item"><a href="./optimal_auction.html">Optimal Auction Strategies</a></li>
+             </ul>
+           </li>
+           <li class="navbar_button">
+              <a class="resume_link" href="./resume.html">Resume</a>
+           </li>
+        </ul>
+    </nav>
+    <main>
+      <div id="petri_dish_main_content">
+         <h1>Economic Petri Dish</h1>
+         <div class="petri_dish_project_section">
+            <div class="petri_dish_picture_container">
+               <img src="./petri_dish_model.png" id="petri_dish_model_overview_screenshot" alt="user interface for the economic petri dish model">
+            </div>
+            <div class="petri_dish_text_container">
+               <h2>Project Overview</h2>
+               The Economoic Petri Dish project was the brainchild of Canadian Economist and founder of Xalorithms, Joseph Potvin. He and Northwestern
+               PhD student Jacob Kelter lead the project. The idea behind the project was to study the effects of index-based pricing, a mechanism 
+               designed by Potvin, on contract negotiations between businesses using different currencies. In the context of a contract, index-based pricing
+               involves agreeing on a price that is dependent on some index that reflects the value of some other, more stable item. The idea is that 
+               by setting a price based on an index, the firms involved in contract negotiations can avoid the issues that may arise under volatile exchange
+               rates. 
+               <br>
+               <br>
+               In order to study index-based pricing, we built an agent-based model to simulate an economy in which firms negotiate contracts with one another 
+               in order to trade. We built the model using Netlogo, an agent-based modeling software developed by the CCL Lab at Northwestern University. 
+               Pictured to the left is the user interface for the model. 
+            </div>
+         </div>
+         <div class="petri_dish_project_section">
+            <a class="petri_dish_picture_container" href="./Lengnick Flow Chart.pdf">
+               <img src="./Lengnick Flow Chart.png" id="flowchart_picture" alt="Flowchart for petri dish model. Click the image in order to view a full sized pdf">
+            </a>
+            <div class="petri_dish_text_container">
+               <h2>Model Description</h2>
+               The economic petri dish model contains the following agents:
+               <ul>
+                  <li>Households</li>
+                  <li>Consumer good firms</li>
+                  <li>Producer good firms</li>
+                  <li>Framework agreements</li>
+               </ul>
+               Households are proxies for workers and consumers. A household is capable of providing labor in order to earn a wage, and capable of spending that
+               wage on a consumer good. The user sets the total number of households in the model before each run.
+               <br>
+               <br>
+               Consumer good and producer good firms are actually the same class class of agent in the model, albeit with slight differences. Firms employ households
+               and pay them wages. They use the labor provided by households to produce goods. Consumer good firms sell their goods to households, and producer good
+               firms sell to other firms, who then use that good as input for whatever they produce. Details such as what inputs firms require, how much of an input
+               is needed to produce a good, and the overal number of each type of firm are set by the user in a json file. 
+               <br>
+               <br>
+               Framework agreements are agreements between firms for the sale of a good. The agreements contain information such as the index being used, and the sale
+               price relative to that index.
+               <br>
+               <br>
+               The basic flow of the model is as follows:
+               <ol>
+                  <li>
+                     At the beginning of a month (the standard time period in the model), firms receive the orders they placed from the previous month and hire/fire
+                     labor based on their needs for the current month. 
+                  </li>
+                  <li>
+                     Next, firms place orders for the inputs they will need based on demand forecasts for the next month. 
+                  </li>
+                  <li>
+                     Consumer good firms sell their goods in the open market for the current month, and producer good firms produce goods to deliver in the next month.
+                  </li>
+                  <li>
+                     At the end of each month, firms calculate their revenues. Low performing firms go out of business and are replaced with new ones. Firms that have 
+                     made losses for a certain number of periods renegotiate their framework agreements.
+                  </li>
+               </ol>
+               For a more detailed description, click the flow chart on the left to view a full sized pdf describing the different procedures in the model. 
+            </div>
+         </div>
+      </div>
+    </main>
+</body>
